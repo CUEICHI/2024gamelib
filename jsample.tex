@@ -1,0 +1,63 @@
+
+\documentclass[submit]{ipsj}
+%\documentclass{ipsj}
+
+\usepackage{latexsym}
+\usepackage[dvipdfmx]{graphicx}
+\graphicspath{{./figs/}{./suppl/}}      % グラフィックを置いたディレクトリを自動で補完する
+
+\usepackage{balance}
+\usepackage{float}                      % 図表が記述位置から飛ばないためのパッケージ
+\usepackage{comment}                    % ブロックコメントを作成する
+\usepackage[switch,columnwise]{lineno}  % 行番号表示（主に添削用
+
+%% src path を勝手に include する
+\makeatletter
+\providecommand*{\input@path}{}
+\g@addto@macro\input@path{{./src/}{./suppl/}}% append
+\makeatother
+
+\def\newblock{\hskip .11em plus .33em minus .07em}
+\def\Underline{\setbox0\hbox\bgroup\let\\\endUnderline}
+\def\endUnderline{\vphantom{y}\egroup\smash{\underline{\box0}}\\}
+\def\|{\verb|}
+
+\input{preface}
+\input{abstract}
+
+\begin{document}
+
+\maketitle
+
+%1
+\input{intro}
+
+
+%2
+\input{flow}
+
+
+%3
+\input{format}
+
+
+%5
+\input{submit}
+
+
+%謝辞
+\input{ack}
+
+\bibliographystyle{ipsjunsrt}
+\bibliography{bibsample}
+%\input{bib}
+
+
+
+%% 付録
+\input{appendix}
+
+\input{bio}
+
+
+\end{document}
