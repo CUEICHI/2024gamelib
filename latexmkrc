@@ -10,3 +10,6 @@ $pdf_mode      = 3; # use dvipdfmx
 
 # if you do not need to preview in -pvc option (preview document and countinuously update mode)
 $pdf_previewer = 'exit';
+
+ensure_path('TEXINPUTS', './sty//' );
+ensure_path('BIBINPUTS', './bib//');
